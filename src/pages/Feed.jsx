@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { FeedContext } from '../context/FeedContext';
 import PostCard from '../components/PostCard';
+import { Heart } from 'lucide-react';
 
 const Feed = () => {
   const { posts, categories } = useContext(FeedContext);
@@ -12,8 +13,9 @@ const Feed = () => {
 
   return (
     <div>
-      <header className="feed-header">
-        VibeFeed ✨
+      <header className="feed-header" style={{ justifyContent: 'space-between' }}>
+        <span>VibeFeed ✨</span>
+        <Heart size={24} color="var(--primary)" fill="var(--primary)" />
       </header>
 
       <div className="category-scroll">
